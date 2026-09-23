@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main
+      class="w-full h-screen bg-gray-800 flex flex-col gap-6 items-center justify-center"
+    >
+      <h1 class="text-2xl font-bold text-white">
+        Weather App using Javascript @v4nixx
+      </h1>
+      <div
+        class="px-8 py-6 flex flex-col items-center justify-centerw w-fit h-[400px] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg"
+      >
+        <div>
+          <input
+            placeholder="Enter a city name"
+            id="cityName"
+            class="bg-white/40 px-2 py-1 rounded-md mb-4 outline-0 focus-visible:outline-1 focus-visible:outline-cyan-500"
+            type="text"
+          />
+          <button
+            id="searchBtn"
+            class="text-white px-2 py-1 bg-cyan-500 rounded-md hover:bg-cyan-600 cursor-pointer active:translate-y-[1px]"
+          >
+            Search
+          </button>
+        </div>
+
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img id="icon" src="assets/cloudy.png" class="w-32 h-32" alt="" />
+          <div class="text-white text-4xl font-bold" id="temp">
+            <span id="tempValue" class="text-6xl">21°C</span>
+          </div>
+          <div class="text-white text-2xl font-bold" id="city">
+            <span id="cityNameTemp" class="text-2xl">City</span>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between w-full px-2 mt-4">
+          <div class="flex items-center gap-4">
+            <img src="assets/humidity.png" class="w-8 h-8 invert" alt="" />
+            <div class="">
+              <p class="text-white font-medium text-xl" id="humidity">93%</p>
+              <span class="text-white">Humidity</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-4">
+              <img src="assets/windSpeed.png" class="w-8 h-8 invert" alt="" />
+              <div>
+                <p class="text-white font-medium text-xl" id="windspeed">
+                  5.2 km/h
+                </p>
+                <span class="text-white">wind speed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
